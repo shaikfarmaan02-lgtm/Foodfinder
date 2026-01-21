@@ -1,0 +1,202 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Left Section - Logo */
+.nav-left {
+  flex: 1;
+}
+
+.logo {
+  color: #10b981;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.logo:hover {
+  color: #059669;
+}
+
+/* Center Section - Navigation Links */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-center a {
+  color: #4b5563;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.nav-center a:hover {
+  color: #10b981;
+  background: #ecfdf5;
+}
+
+/* Right Section - Auth */
+.nav-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.user-role {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  background: #f3f4f6;
+  border-radius: 20px;
+}
+
+.login-link {
+  padding: 8px 20px;
+  background: #10b981;
+  color: #fff !important;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.login-link:hover {
+  background: #059669;
+}
+
+.register-link {
+  padding: 8px 20px;
+  background: #fff;
+  color: #10b981 !important;
+  border: 2px solid #10b981;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.register-link:hover {
+  background: #ecfdf5;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.role-indicator {
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.role-indicator.giver {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.role-indicator.organization {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.role-indicator.finder {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.role-indicator.analyst {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.role-indicator.admin {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.status-indicator {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.status-indicator.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-indicator.approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.logout-btn {
+  padding: 8px 18px;
+  background: #10b981;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: #059669;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-left {
+    flex: none;
+  }
+
+  .nav-center {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .nav-center a {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .nav-right {
+    flex: none;
+  }
+}
