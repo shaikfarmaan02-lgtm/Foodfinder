@@ -266,7 +266,8 @@ function AdminDashboard({ foodList, setFoodList }) {
       {/* User Approvals Tab */}
       {activeTab === "approvals" && (
         <div className="admin-content">
-          <div className="approvals-header">
+          <div className="approvals-header">git branch
+
             <h3>🔐 User Approval Requests</h3>
             <p>Review and approve new user registrations</p>
           </div>
