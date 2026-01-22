@@ -3,7 +3,7 @@
 .find-food-page {
   min-height: 100vh;
   padding: 40px 60px;
-  background: linear-gradient(135deg, #ecfdf5 0%, #fef3c7 100%);
+  background: var(--color-light-bg);
 }
 
 .find-food-container {
@@ -13,12 +13,12 @@
 .find-food-container h2 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 10px;
 }
 
 .find-food-container > p {
-  color: #4b5563;
+  color: var(--color-gray-600);
   margin-bottom: 30px;
 }
 
@@ -32,43 +32,43 @@
 
 .filter-select {
   padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #d0d5dd;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-300);
   font-size: 0.95rem;
-  background: white;
-  color: #374151;
+  background: var(--color-white);
+  color: var(--color-gray-700);
   cursor: pointer;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   min-width: 160px;
 }
 
 .filter-select:focus {
   outline: none;
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(73, 136, 196, 0.15);
 }
 
 .filter-select:hover {
-  border-color: #10b981;
+  border-color: var(--color-accent);
 }
 
 .map-placeholder {
   height: 300px;
-  background: #fff;
+  background: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   margin-bottom: 30px;
-  color: #9ca3af;
-  border: 1px solid #e5e7eb;
+  color: var(--color-gray-400);
+  border: 1px solid var(--color-gray-200);
 }
 
 .map-container {
   margin-bottom: 30px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
 }
 
 .food-list {
@@ -78,27 +78,27 @@
 }
 
 .food-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f0fdf4 100%);
+  background: var(--color-white);
   padding: 0;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
-  border: 1px solid #d1fae5;
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-200);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 
 .food-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.18);
+  box-shadow: var(--shadow-lg);
 }
 
 .food-card-header {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: var(--color-primary);
   padding: 16px 20px;
 }
 
 .food-card-header h3 {
-  color: #fff;
+  color: var(--color-white);
   font-size: 1.2rem;
   margin: 0;
 }
@@ -108,7 +108,7 @@
 }
 
 .food-card-body p {
-  color: #4b5563;
+  color: var(--color-gray-600);
   margin: 8px 0;
   font-size: 0.9rem;
   display: flex;
@@ -117,14 +117,14 @@
 }
 
 .food-card-body .location {
-  color: #1f2937;
+  color: var(--color-primary-dark);
   font-weight: 500;
 }
 
 .food-card-body .price {
   display: inline-block;
-  background: #fef3c7;
-  color: #b45309;
+  background: var(--color-warning-light);
+  color: var(--color-warning);
   padding: 4px 12px;
   border-radius: 20px;
   font-weight: 600;
@@ -132,7 +132,7 @@
 }
 
 .food-card-body .distance {
-  color: #6b7280;
+  color: var(--color-gray-500);
   font-size: 0.85rem;
 }
 
@@ -145,52 +145,50 @@
 .details-link {
   display: inline-block;
   padding: 10px 24px;
-  background: #10b981;
-  color: #fff;
-  border-radius: 25px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
-  transition: background 0.2s, transform 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .details-link:hover {
-  background: #059669;
-  color: #fff;
-  transform: scale(1.02);
+  background: var(--color-primary-dark);
+  color: var(--color-white);
 }
 
 .collect-btn {
   padding: 10px 20px;
-  background: #f59e0b;
+  background: var(--color-accent);
   border: none;
-  color: white;
-  border-radius: 25px;
+  color: var(--color-white);
+  border-radius: var(--radius-md);
   cursor: pointer;
   font-weight: 500;
   font-size: 0.9rem;
-  transition: background 0.2s, transform 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .collect-btn:hover {
-  background: #d97706;
-  transform: scale(1.02);
+  background: var(--color-primary);
 }
 
 .delete-btn {
   margin-top: 15px;
   padding: 10px 16px;
-  background: #ef4444;
+  background: var(--color-error);
   border: none;
-  color: white;
-  border-radius: 6px;
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   font-weight: 500;
-  transition: background 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .delete-btn:hover {
-  background: #dc2626;
+  background: #b91c1c;
 }
 
 /* Responsive */

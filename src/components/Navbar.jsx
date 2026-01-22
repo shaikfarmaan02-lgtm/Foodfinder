@@ -1,12 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ProfileDropdown from "./ProfileDropdown";
 import "../styles/navbar.css";
 
 function Navbar() {
   const [role, setRole] = useState(null);
   const [approvalStatus, setApprovalStatus] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const navigate = useNavigate();
 
   // Read role and approval status AFTER component mounts
   useEffect(() => {
@@ -26,24 +26,6 @@ function Navbar() {
     window.addEventListener("storage", handleStorageChange);
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem("role");
-    localStorage.removeItem("approvalStatus");
-    localStorage.removeItem("giverName");
-    localStorage.removeItem("giverContact");
-    localStorage.removeItem("orgName");
-    localStorage.removeItem("orgEmail");
-    localStorage.removeItem("analystName");
-    localStorage.removeItem("analystEmail");
-    localStorage.removeItem("adminEmail");
-    localStorage.removeItem("finderName");
-    localStorage.removeItem("userEmail");
-    setRole(null);
-    setApprovalStatus(null);
-    window.dispatchEvent(new Event("storage"));
-    navigate("/login");
-  };
 
   // Check if user is approved (or doesn't need approval)
   const isApproved = approvalStatus === "APPROVED" || role === "admin" || role === "finder";
@@ -122,9 +104,7 @@ function Navbar() {
                 <span className="status-indicator approved">✓</span>
               )}
             </div>
-            <button className="logout-btn" onClick={handleLogout}>
-              Logout
-            </button>
+            <ProfileDropdown />
           </div>
         )}
       </div>

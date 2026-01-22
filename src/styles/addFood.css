@@ -2,27 +2,31 @@
 
 .add-food-container {
   min-height: 100vh;
-  padding: 40px 60px;
-  background: linear-gradient(135deg, #ecfdf5 0%, #fef3c7 100%);
+  padding: 48px 40px;
+  background: var(--color-light-bg);
 }
 
 .add-food-container h2 {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 8px;
 }
 
 .add-food-container p {
-  color: #4b5563;
+  color: var(--color-gray-500);
   font-size: 0.95rem;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .add-food-form {
   display: flex;
   flex-direction: column;
   max-width: 700px;
+  background: var(--color-white);
+  padding: 32px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
 }
 
 .form-group {
@@ -33,7 +37,7 @@
   display: block;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #374151;
+  color: var(--color-gray-700);
   margin-bottom: 10px;
 }
 
@@ -51,50 +55,49 @@
   width: 100%;
   padding: 14px 16px;
   font-size: 0.95rem;
-  color: #1f2937;
-  background: #fff;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  color: var(--color-gray-800);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
 }
 
 .add-food-form input::placeholder {
-  color: #9ca3af;
+  color: var(--color-gray-400);
 }
 
 .add-food-form input:focus,
 .add-food-form select:focus {
   outline: none;
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(73, 136, 196, 0.15);
 }
 
 .add-food-form select {
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234b5563' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
 }
 
 .add-food-form button {
   width: 100%;
-  max-width: 700px;
   padding: 14px;
-  margin-top: 10px;
-  background: #10b981;
+  margin-top: 8px;
+  background: var(--color-primary);
   border: none;
-  border-radius: 8px;
-  color: #fff;
+  border-radius: var(--radius-md);
+  color: var(--color-white);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .add-food-form button:hover {
-  background: #059669;
+  background: var(--color-primary-dark);
 }
 
 /* Unauthorized */
@@ -103,27 +106,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ecfdf5 0%, #fef3c7 100%);
+  background: var(--color-light-bg);
 }
 
 .unauthorized-message h2 {
-  color: #dc2626;
+  color: var(--color-error);
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .add-food-container {
-    padding: 30px 20px;
+    padding: 32px 20px;
+  }
+
+  .add-food-form {
+    padding: 24px 20px;
   }
 
   .form-row {
     flex-direction: column;
     gap: 0;
-  }
-
-  .add-food-form {
-    max-width: 100%;
   }
 }

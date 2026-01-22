@@ -3,7 +3,7 @@
 .donor-dashboard {
   min-height: 100vh;
   padding: 40px 60px;
-  background: linear-gradient(135deg, #ecfdf5 0%, #fef3c7 100%);
+  background: var(--color-light-bg);
 }
 
 .dashboard-header {
@@ -17,12 +17,12 @@
 
 .header-content h1 {
   font-size: 2rem;
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 8px;
 }
 
 .header-content p {
-  color: #6b7280;
+  color: var(--color-gray-500);
   font-size: 1rem;
 }
 
@@ -34,13 +34,13 @@
 
 .donor-name {
   font-weight: 600;
-  color: #1f2937;
+  color: var(--color-primary-dark);
   font-size: 1.1rem;
 }
 
 .donor-badge {
-  background: #10b981;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -52,7 +52,7 @@
 }
 
 .impact-section h2 {
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 20px;
   font-size: 1.4rem;
 }
@@ -64,16 +64,16 @@
 }
 
 .impact-card {
-  background: white;
+  background: var(--color-white);
   padding: 30px;
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease;
 }
 
 .impact-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .impact-card .impact-icon {
@@ -85,13 +85,13 @@
 .impact-card .impact-value {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--color-primary-dark);
   display: block;
 }
 
 .impact-card .impact-label {
   font-size: 1rem;
-  color: #4b5563;
+  color: var(--color-gray-600);
   font-weight: 600;
   margin-top: 8px;
   display: block;
@@ -99,14 +99,14 @@
 
 .impact-card .impact-desc {
   font-size: 0.85rem;
-  color: #9ca3af;
+  color: var(--color-gray-400);
   margin-top: 8px;
   display: block;
 }
 
-.impact-card.meals { border-top: 4px solid #10b981; }
-.impact-card.rate { border-top: 4px solid #3b82f6; }
-.impact-card.saved { border-top: 4px solid #8b5cf6; }
+.impact-card.meals { border-top: 4px solid var(--color-success); }
+.impact-card.rate { border-top: 4px solid var(--color-accent); }
+.impact-card.saved { border-top: 4px solid var(--color-primary); }
 
 /* Stats Section */
 .stats-section {
@@ -114,7 +114,7 @@
 }
 
 .stats-section h2 {
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 20px;
   font-size: 1.4rem;
 }
@@ -126,11 +126,11 @@
 }
 
 .stat-card {
-  background: white;
+  background: var(--color-white);
   padding: 24px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
 }
 
 .stat-card .stat-number {
@@ -140,36 +140,36 @@
 }
 
 .stat-card .stat-label {
-  color: #6b7280;
+  color: var(--color-gray-500);
   font-size: 0.85rem;
   margin-top: 8px;
   display: block;
 }
 
-.stat-card.total .stat-number { color: #3b82f6; }
-.stat-card.active .stat-number { color: #10b981; }
-.stat-card.collected .stat-number { color: #8b5cf6; }
-.stat-card.wasted .stat-number { color: #ef4444; }
+.stat-card.total .stat-number { color: var(--color-accent); }
+.stat-card.active .stat-number { color: var(--color-success); }
+.stat-card.collected .stat-number { color: var(--color-primary); }
+.stat-card.wasted .stat-number { color: var(--color-error); }
 
 /* Progress Section */
 .progress-section {
-  background: white;
+  background: var(--color-white);
   padding: 30px;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   margin-bottom: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-md);
 }
 
 .progress-section h2 {
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 20px;
   font-size: 1.3rem;
 }
 
 .progress-bar {
   height: 24px;
-  background: #e5e7eb;
-  border-radius: 12px;
+  background: var(--color-gray-200);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
 }
@@ -180,11 +180,11 @@
 }
 
 .progress-fill.collected-fill {
-  background: linear-gradient(90deg, #10b981, #059669);
+  background: var(--color-success);
 }
 
 .progress-fill.wasted-fill {
-  background: linear-gradient(90deg, #ef4444, #dc2626);
+  background: var(--color-error);
 }
 
 .progress-legend {
@@ -199,7 +199,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.9rem;
-  color: #4b5563;
+  color: var(--color-gray-600);
 }
 
 .dot {
@@ -208,21 +208,21 @@
   border-radius: 50%;
 }
 
-.dot.green { background: #10b981; }
-.dot.red { background: #ef4444; }
-.dot.blue { background: #3b82f6; }
+.dot.green { background: var(--color-success); }
+.dot.red { background: var(--color-error); }
+.dot.blue { background: var(--color-accent); }
 
 /* Chart Section */
 .chart-section {
-  background: white;
+  background: var(--color-white);
   padding: 30px;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   margin-bottom: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-md);
 }
 
 .chart-section h2 {
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 20px;
   font-size: 1.3rem;
 }
@@ -233,7 +233,7 @@
   align-items: flex-end;
   height: 200px;
   padding: 20px 0;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 2px solid var(--color-gray-200);
 }
 
 .chart-bar-group {
@@ -256,13 +256,13 @@
   transition: height 0.3s ease;
 }
 
-.bar.donated { background: #3b82f6; }
-.bar.collected { background: #10b981; }
-.bar.wasted { background: #ef4444; }
+.bar.donated { background: var(--color-accent); }
+.bar.collected { background: var(--color-success); }
+.bar.wasted { background: var(--color-error); }
 
 .chart-label {
   font-size: 0.8rem;
-  color: #6b7280;
+  color: var(--color-gray-500);
 }
 
 .chart-legend {
@@ -277,7 +277,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.85rem;
-  color: #4b5563;
+  color: var(--color-gray-600);
 }
 
 /* History Section */
@@ -286,16 +286,16 @@
 }
 
 .history-section h2 {
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 20px;
   font-size: 1.3rem;
 }
 
 .history-table {
-  background: white;
-  border-radius: 16px;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-md);
 }
 
 table {
@@ -304,23 +304,23 @@ table {
 }
 
 thead {
-  background: #f9fafb;
+  background: var(--color-gray-50);
 }
 
 th, td {
   padding: 14px 20px;
   text-align: left;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--color-gray-200);
 }
 
 th {
   font-weight: 600;
-  color: #374151;
+  color: var(--color-gray-700);
   font-size: 0.85rem;
 }
 
 td {
-  color: #4b5563;
+  color: var(--color-gray-600);
   font-size: 0.9rem;
 }
 
@@ -332,13 +332,13 @@ td {
   text-transform: capitalize;
 }
 
-.status-badge.available { background: #d1fae5; color: #065f46; }
-.status-badge.collected { background: #dbeafe; color: #1e40af; }
-.status-badge.expired { background: #fee2e2; color: #991b1b; }
+.status-badge.available { background: var(--color-success-light); color: var(--color-success); }
+.status-badge.collected { background: rgba(73, 136, 196, 0.15); color: var(--color-accent); }
+.status-badge.expired { background: var(--color-error-light); color: var(--color-error); }
 
 .no-data {
   text-align: center;
-  color: #9ca3af;
+  color: var(--color-gray-400);
   padding: 40px !important;
 }
 
@@ -348,7 +348,7 @@ td {
 }
 
 .tips-section h2 {
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 20px;
   font-size: 1.3rem;
 }
@@ -360,12 +360,12 @@ td {
 }
 
 .tip-card {
-  background: white;
+  background: var(--color-white);
   padding: 24px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
 }
 
 .tip-card:hover {
@@ -379,13 +379,13 @@ td {
 }
 
 .tip-card h4 {
-  color: #1f2937;
+  color: var(--color-primary-dark);
   margin-bottom: 8px;
   font-size: 1rem;
 }
 
 .tip-card p {
-  color: #6b7280;
+  color: var(--color-gray-500);
   font-size: 0.85rem;
   margin: 0;
 }
@@ -396,11 +396,11 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ecfdf5 0%, #fef3c7 100%);
+  background: var(--color-light-bg);
 }
 
 .unauthorized-message h2 {
-  color: #dc2626;
+  color: var(--color-error);
   font-size: 1.2rem;
 }
 

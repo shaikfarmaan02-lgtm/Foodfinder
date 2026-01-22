@@ -2,8 +2,8 @@
 
 .auth-page {
   min-height: 100vh;
-  padding: 60px 40px;
-  background: linear-gradient(135deg, #ecfdf5 0%, #fef3c7 100%);
+  padding: 60px 24px;
+  background: var(--color-light-bg);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -11,25 +11,24 @@
 
 .auth-container {
   width: 100%;
-  max-width: 550px;
-  background: #fff;
+  max-width: 500px;
+  background: var(--color-white);
   padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.1);
-  border: 1px solid #d1fae5;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
 }
 
 .auth-container h2 {
-  color: #1f2937;
-  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
 .auth-container p {
-  color: #4b5563;
-  margin-bottom: 30px;
+  color: var(--color-gray-500);
+  margin-bottom: 32px;
   text-align: center;
 }
 
@@ -37,19 +36,19 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .role-btn {
   padding: 16px 12px;
-  background: #fff;
-  border: 2px solid #e5e7eb;
-  border-radius: 12px;
-  color: #374151;
+  background: var(--color-white);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  color: var(--color-gray-700);
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +57,7 @@
 }
 
 .role-btn .role-icon {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
 }
 
 .role-btn .role-title {
@@ -68,18 +67,18 @@
 
 .role-btn .role-desc {
   font-size: 0.7rem;
-  color: #9ca3af;
+  color: var(--color-gray-400);
 }
 
 .role-btn:hover {
-  border-color: #10b981;
-  background: #f0fdf4;
+  border-color: var(--color-accent);
+  background: rgba(73, 136, 196, 0.05);
 }
 
 .role-btn.active {
-  background: linear-gradient(135deg, #10b981, #059669);
-  border-color: #10b981;
-  color: #fff;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .role-btn.active .role-desc {
@@ -99,7 +98,7 @@
   display: block;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #374151;
+  color: var(--color-gray-700);
   margin-bottom: 8px;
 }
 
@@ -108,23 +107,23 @@
   width: 100%;
   padding: 14px 16px;
   font-size: 0.95rem;
-  color: #1f2937;
-  background: #fff;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
+  color: var(--color-gray-800);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
   box-sizing: border-box;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .auth-form input::placeholder {
-  color: #9ca3af;
+  color: var(--color-gray-400);
 }
 
 .auth-form input:focus,
 .auth-form select:focus {
   outline: none;
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(73, 136, 196, 0.15);
 }
 
 .auth-form button[type="submit"],
@@ -132,40 +131,37 @@
 .register-btn {
   width: 100%;
   padding: 14px;
-  margin-top: 10px;
-  background: linear-gradient(135deg, #10b981, #059669);
+  margin-top: 12px;
+  background: var(--color-primary);
   border: none;
-  border-radius: 8px;
-  color: #fff;
+  border-radius: var(--radius-md);
+  color: var(--color-white);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .auth-form button[type="submit"]:hover,
 .login-btn:hover,
 .register-btn:hover {
-  background: linear-gradient(135deg, #059669, #047857);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  background: var(--color-primary-dark);
 }
 
 .register-btn:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: not-allowed;
-  transform: none;
 }
 
 /* Register Container */
 .register-container {
-  max-width: 600px;
+  max-width: 580px;
 }
 
 .role-section h3 {
-  color: #374151;
+  color: var(--color-gray-700);
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   text-align: center;
 }
 
@@ -177,77 +173,81 @@
   font-size: 0.65rem;
   padding: 3px 8px;
   border-radius: 10px;
-  background: #fef3c7;
-  color: #92400e;
+  background: var(--color-warning-light);
+  color: var(--color-warning);
   margin-top: 5px;
 }
 
 .role-btn .approval-note.auto {
-  background: #d1fae5;
-  color: #065f46;
+  background: var(--color-success-light);
+  color: var(--color-success);
 }
 
 .role-btn.active .approval-note {
   background: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  color: var(--color-white);
 }
 
 .auth-form h4 {
-  color: #1f2937;
+  color: var(--color-primary-dark);
   font-size: 1.1rem;
   margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #10b981;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-accent);
 }
 
 /* Info Boxes */
 .info-box {
-  padding: 12px 16px;
-  border-radius: 8px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
   font-size: 0.85rem;
-  margin-top: 15px;
+  margin-top: 16px;
 }
 
 .info-box.warning {
-  background: #fef3c7;
-  color: #92400e;
-  border: 1px solid #fcd34d;
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+  border: 1px solid rgba(217, 119, 6, 0.2);
 }
 
 .info-box.success {
-  background: #d1fae5;
-  color: #065f46;
-  border: 1px solid #6ee7b7;
+  background: var(--color-success-light);
+  color: var(--color-success);
+  border: 1px solid rgba(5, 150, 105, 0.2);
 }
 
 /* Auth Footer */
 .auth-footer {
-  margin-top: 25px;
+  margin-top: 28px;
   padding-top: 20px;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--color-gray-200);
   text-align: center;
 }
 
 .auth-footer p {
   margin: 0;
-  color: #6b7280;
+  color: var(--color-gray-500);
   font-size: 0.9rem;
 }
 
 .auth-footer a {
-  color: #10b981;
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
 }
 
 .auth-footer a:hover {
-  text-decoration: underline;
+  color: var(--color-accent);
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .auth-page {
-    padding: 40px 20px;
+    padding: 32px 16px;
+  }
+
+  .auth-container {
+    padding: 28px 20px;
   }
 
   .role-buttons {
