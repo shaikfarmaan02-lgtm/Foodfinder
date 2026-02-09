@@ -44,13 +44,13 @@ function Register() {
 
     // Validate based on role
     if (selectedRole === "giver") {
-      if (!formData.name || !formData.phone || !formData.email) {
+      if (!formData.name || !formData.phone || !formData.email || !formData.address) {
         alert("Please fill in all required fields");
         setIsSubmitting(false);
         return;
       }
     } else if (selectedRole === "organization") {
-      if (!formData.orgName || !formData.email || !formData.phone) {
+      if (!formData.orgName || !formData.email || !formData.phone || !formData.address) {
         alert("Please fill in all required fields");
         setIsSubmitting(false);
         return;
@@ -172,13 +172,14 @@ function Register() {
               />
             </div>
             <div className="form-group">
-              <label>Address (Optional)</label>
+              <label>Address *</label>
               <input
                 type="text"
                 name="address"
                 placeholder="Enter your address"
                 value={formData.address}
                 onChange={handleInputChange}
+                required
               />
             </div>
             <div className="info-box warning">
@@ -239,13 +240,14 @@ function Register() {
               />
             </div>
             <div className="form-group">
-              <label>Address</label>
+              <label>Address *</label>
               <input
                 type="text"
                 name="address"
                 placeholder="Enter organization address"
                 value={formData.address}
                 onChange={handleInputChange}
+                required
               />
             </div>
             <div className="info-box warning">

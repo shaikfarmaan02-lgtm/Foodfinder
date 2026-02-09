@@ -4,6 +4,7 @@ function Profile() {
   const role = localStorage.getItem("role");
   const giverName = localStorage.getItem("giverName");
   const giverContact = localStorage.getItem("giverContact");
+  const giverAddress = localStorage.getItem("giverAddress");
 
   return (
     <div className="profile-page">
@@ -16,6 +17,7 @@ function Profile() {
             <>
               <p><strong>Name:</strong> {giverName || "Not set"}</p>
               <p><strong>Contact:</strong> {giverContact || "Not set"}</p>
+              <p><strong>Address:</strong> {giverAddress || "Not set"}</p>
             </>
           )}
         </div>

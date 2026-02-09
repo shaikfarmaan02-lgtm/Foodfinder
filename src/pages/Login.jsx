@@ -84,6 +84,7 @@ function Login() {
       localStorage.setItem("role", "giver");
       localStorage.setItem("giverName", name);
       localStorage.setItem("giverContact", phone);
+      localStorage.setItem("giverAddress", user?.address || "");
       localStorage.setItem("approvalStatus", approvalStatus);
       localStorage.setItem("userEmail", user?.email || email);
 
