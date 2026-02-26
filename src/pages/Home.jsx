@@ -6,6 +6,17 @@ function Home() {
     <div className="home-page">
       {/* Hero Section */}
       <div className="hero-section">
+        {/* Floating bubbles */}
+        <div className="hero-bubbles" aria-hidden="true">
+          <div className="bubble bubble-1" />
+          <div className="bubble bubble-2" />
+          <div className="bubble bubble-3" />
+          <div className="bubble bubble-4" />
+          <div className="bubble bubble-5" />
+          <div className="bubble bubble-6" />
+          <div className="bubble bubble-7" />
+          <div className="bubble bubble-8" />
+        </div>
         <div className="home-content">
           <h1>No Food Waste. No Hunger.</h1>
           <p>

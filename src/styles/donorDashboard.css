@@ -2,28 +2,33 @@
 
 .donor-dashboard {
   min-height: 100vh;
-  padding: 40px 60px;
-  background: var(--color-light-bg);
+  padding: 60px 60px 80px;
+  position: relative;
 }
 
 .dashboard-header {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .header-content h1 {
-  font-size: 2rem;
-  color: var(--color-primary-dark);
+  font-size: 2.25rem;
+  color: #ffffff;
   margin-bottom: 8px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .header-content p {
-  color: var(--color-gray-500);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .donor-info {
@@ -34,27 +39,34 @@
 
 .donor-name {
   font-weight: 600;
-  color: var(--color-primary-dark);
+  color: #ffffff;
   font-size: 1.1rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .donor-badge {
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #dc2626 100%);
   color: var(--color-white);
-  padding: 6px 14px;
+  padding: 8px 16px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.35);
 }
 
 /* Impact Section */
 .impact-section {
-  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 48px;
 }
 
 .impact-section h2 {
-  color: var(--color-primary-dark);
-  margin-bottom: 20px;
-  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .impact-grid {
@@ -64,16 +76,20 @@
 }
 
 .impact-card {
-  background: var(--color-white);
-  padding: 30px;
-  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 32px;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: var(--shadow-md);
-  transition: transform 0.2s ease;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .impact-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.25);
 }
 
 .impact-card .impact-icon {
@@ -87,6 +103,7 @@
   font-weight: 700;
   color: var(--color-primary-dark);
   display: block;
+  text-shadow: none;
 }
 
 .impact-card .impact-label {
@@ -95,6 +112,7 @@
   font-weight: 600;
   margin-top: 8px;
   display: block;
+  text-shadow: none;
 }
 
 .impact-card .impact-desc {
@@ -110,40 +128,48 @@
 
 /* Stats Section */
 .stats-section {
-  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 48px;
 }
 
 .stats-section h2 {
-  color: var(--color-primary-dark);
-  margin-bottom: 20px;
-  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 
 .stat-card {
-  background: var(--color-white);
-  padding: 24px;
-  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 28px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .stat-card .stat-number {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   display: block;
 }
 
 .stat-card .stat-label {
-  color: var(--color-gray-500);
-  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  font-size: 0.9rem;
   margin-top: 8px;
   display: block;
+  font-weight: 500;
 }
 
 .stat-card.total .stat-number { color: var(--color-accent); }
@@ -153,15 +179,20 @@
 
 /* Progress Section */
 .progress-section {
-  background: var(--color-white);
-  padding: 30px;
-  border-radius: var(--radius-xl);
-  margin-bottom: 40px;
-  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 36px;
+  border-radius: 20px;
+  margin-bottom: 48px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .progress-section h2 {
-  color: var(--color-primary-dark);
+  color: var(--color-gray-800);
   margin-bottom: 20px;
   font-size: 1.3rem;
 }
@@ -214,17 +245,23 @@
 
 /* Chart Section */
 .chart-section {
-  background: var(--color-white);
-  padding: 30px;
-  border-radius: var(--radius-xl);
-  margin-bottom: 40px;
-  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 36px;
+  border-radius: 20px;
+  margin-bottom: 48px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .chart-section h2 {
-  color: var(--color-primary-dark);
-  margin-bottom: 20px;
-  font-size: 1.3rem;
+  color: var(--color-gray-800);
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .chart-container {
@@ -282,20 +319,27 @@
 
 /* History Section */
 .history-section {
-  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 48px;
 }
 
 .history-section h2 {
-  color: var(--color-primary-dark);
-  margin-bottom: 20px;
-  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .history-table {
-  background: var(--color-white);
-  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 table {
@@ -333,7 +377,7 @@ td {
 }
 
 .status-badge.available { background: var(--color-success-light); color: var(--color-success); }
-.status-badge.collected { background: rgba(73, 136, 196, 0.15); color: var(--color-accent); }
+.status-badge.collected { background: rgba(var(--color-accent-rgb), 0.15); color: var(--color-accent); }
 .status-badge.expired { background: var(--color-error-light); color: var(--color-error); }
 
 .no-data {
@@ -344,38 +388,46 @@ td {
 
 /* Tips Section */
 .tips-section {
-  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 48px;
 }
 
 .tips-section h2 {
-  color: var(--color-primary-dark);
-  margin-bottom: 20px;
-  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .tips-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
 .tip-card {
-  background: var(--color-white);
-  padding: 24px;
-  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 28px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tip-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
 }
 
 .tip-card .tip-icon {
-  font-size: 2rem;
+  font-size: 2.25rem;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .tip-card h4 {
@@ -396,7 +448,7 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-light-bg);
+  background: var(--app-bg);
 }
 
 .unauthorized-message h2 {

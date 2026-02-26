@@ -1,0 +1,261 @@
+/* ===== PREMIUM PAGE BACKGROUNDS WITH VISIBLE FOOD IMAGERY ===== */
+
+:root {
+  /* High-quality food background images (using Unsplash) */
+  --bg-food-1: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=80');
+  --bg-food-2: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1920&q=80');
+  --bg-food-3: url('https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1920&q=80');
+  --bg-food-4: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=1920&q=80');
+  --bg-food-5: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1920&q=80');
+  --bg-food-6: url('https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=1920&q=80');
+  --bg-vegetables: url('https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1920&q=80');
+  --bg-fruits: url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=1920&q=80');
+  --bg-cooking: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=80');
+  --bg-restaurant: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80');
+  
+  /* Dark overlay for readability */
+  --overlay-dark: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.82) 0%,
+    rgba(15, 23, 42, 0.72) 50%,
+    rgba(15, 23, 42, 0.78) 100%
+  );
+}
+
+/* ===== BASE PAGE SETUP ===== */
+.home-page,
+.auth-page,
+.find-food-page,
+.add-food-container,
+.food-details-page,
+.profile-page,
+.my-foods-page,
+.contact-page,
+.feedback-page,
+.admin-dashboard,
+.donor-dashboard,
+.org-dashboard,
+.analytics-dashboard,
+.status-page,
+.unauthorized-message {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+/* ===== BACKGROUND IMAGE LAYER ===== */
+.home-page::before,
+.auth-page::before,
+.find-food-page::before,
+.add-food-container::before,
+.food-details-page::before,
+.profile-page::before,
+.my-foods-page::before,
+.contact-page::before,
+.feedback-page::before,
+.admin-dashboard::before,
+.donor-dashboard::before,
+.org-dashboard::before,
+.analytics-dashboard::before,
+.status-page::before,
+.unauthorized-message::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ===== DARK OVERLAY LAYER ===== */
+.home-page::after,
+.auth-page::after,
+.find-food-page::after,
+.add-food-container::after,
+.food-details-page::after,
+.profile-page::after,
+.my-foods-page::after,
+.contact-page::after,
+.feedback-page::after,
+.admin-dashboard::after,
+.donor-dashboard::after,
+.org-dashboard::after,
+.analytics-dashboard::after,
+.status-page::after,
+.unauthorized-message::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--overlay-dark);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+/* ===== PAGE-SPECIFIC BACKGROUNDS ===== */
+
+.home-page::before {
+  background-image: var(--bg-food-1);
+}
+
+.auth-page::before {
+  background-image: var(--bg-restaurant);
+}
+
+.find-food-page::before {
+  background-image: var(--bg-vegetables);
+}
+
+.add-food-container::before {
+  background-image: var(--bg-cooking);
+}
+
+.food-details-page::before {
+  background-image: var(--bg-fruits);
+}
+
+.profile-page::before {
+  background-image: var(--bg-food-2);
+}
+
+.my-foods-page::before {
+  background-image: var(--bg-food-3);
+}
+
+.contact-page::before {
+  background-image: var(--bg-food-4);
+}
+
+.feedback-page::before {
+  background-image: var(--bg-food-5);
+}
+
+.admin-dashboard::before {
+  background-image: var(--bg-food-6);
+}
+
+.donor-dashboard::before {
+  background-image: var(--bg-vegetables);
+}
+
+.org-dashboard::before {
+  background-image: var(--bg-food-1);
+}
+
+.analytics-dashboard::before {
+  background-image: var(--bg-food-2);
+}
+
+.status-page::before {
+  background-image: var(--bg-fruits);
+}
+
+.unauthorized-message::before {
+  background-image: var(--bg-restaurant);
+}
+
+/* ===== ENTRANCE ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===== GLASS CARD ENHANCEMENTS ===== */
+.auth-container,
+.add-food-form,
+.food-details-container,
+.profile-container,
+.feedback-container,
+.contact-container,
+.status-container,
+.my-foods-container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4) !important;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Food cards with glass effect */
+.food-card,
+.stat-card,
+.impact-card,
+.feature-card,
+.process-step,
+.approval-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.2) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover,
+.stat-card:hover,
+.impact-card:hover,
+.feature-card:hover,
+.process-step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* ===== SECTION GLASS PANELS ===== */
+.admin-content,
+.tab-content,
+.quick-actions,
+.recent-activity,
+.find-food-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 30px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ===== TEXT COLORS FOR DARK BACKGROUNDS ===== */
+.home-page h1,
+.home-page h2,
+.find-food-container h2,
+.add-food-container > h2,
+.admin-dashboard .admin-header h1,
+.donor-dashboard .header-content h1,
+.org-dashboard .header-content h1,
+.analytics-dashboard .header-content h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home-page .section-subtitle,
+.find-food-container > p,
+.add-food-container > p,
+.admin-dashboard .admin-header p,
+.donor-dashboard .header-content p,
+.org-dashboard .header-content p,
+.analytics-dashboard .header-content p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .admin-content,
+  .tab-content,
+  .find-food-container {
+    padding: 20px;
+  }
+}

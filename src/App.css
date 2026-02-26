@@ -6,14 +6,16 @@
 
 /* ===== PAGE CONTENT ===== */
 .page-content {
-  max-width: 1200px;
+  max-width: var(--container-max);
   margin: 0 auto;
-  padding: var(--spacing-xl) var(--spacing-lg);
+  padding: calc(var(--spacing-xl) + 4px) var(--page-gutter);
 }
 
 /* ===== CARD COMPONENT ===== */
 .card {
-  background: var(--color-white);
+  background: var(--surface-2);
+  backdrop-filter: blur(var(--blur-md));
+  border: 1px solid var(--border-subtle);
   padding: var(--spacing-lg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -47,6 +49,32 @@
   justify-content: center;
   min-height: 200px;
   color: var(--color-gray-500);
+}
+
+/* ===== UNAUTHORIZED / STATUS ===== */
+.unauthorized-message {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  padding: var(--spacing-2xl) var(--page-gutter);
+}
+
+.unauthorized-message > div,
+.unauthorized-message > section {
+  width: 100%;
+}
+
+.unauthorized-message h2 {
+  margin: 0;
+  color: var(--color-gray-900);
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+
+.unauthorized-message p {
+  margin-top: 10px;
+  color: var(--color-gray-600);
 }
 
 /* ===== NO DATA STATE ===== */
